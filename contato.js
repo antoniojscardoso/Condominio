@@ -11,7 +11,7 @@ Email.send({
 SecureToken : "a32021ae-050a-43d2-9e24-b5b9e579d175",
 To : 'osodracdigital@gmail.com',
 From: 'osodracdigital@gmail.com',
-Subject: `O morador ${sender} enviou uma mensagem `,
+Subject: `${sender} enviou uma mensagem `,
 Body: `${message}`
 })
 .then(function (message) {
