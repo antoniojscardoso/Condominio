@@ -1,0 +1,209 @@
+* { margin: 0; padding: 0; }
+ 
+@font-face {
+  font-family: Italiana;
+  src: url('./fonts/Italiana-Regular.ttf');
+}
+ 
+@font-face {
+  font-family: Yellowtail;
+  src: url('./fonts/Italiana-Regular.ttf');
+}
+ 
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #91D6D3;
+}
+ 
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background: #91D6D3;
+}
+ 
+ 
+#menu {
+  background-color: transparent;
+  top: 0px;
+  overflow: hidden;
+  text-decoration: none;
+}
+ 
+#menu ul {
+  max-width: 100%;
+  list-style: none;
+  overflow: hidden;
+  display: flex;
+  padding: 0;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+ 
+#menu ul li {
+  display: inline;
+  text-decoration: none;
+}
+ 
+#menu ul li a {
+  padding: 20px;
+  color: #020d4b;
+  font-size: 35px;
+  margin: 0px;
+  padding: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  display: inline-block;
+  text-decoration: none;
+  justify-content: center;
+  border-radius: 25px;
+  transition: linear .3s;
+}
+ 
+#menu ul li a:hover {
+  color: #FFF4CF;
+  background-color:#020d4b;
+  border-radius: 25px;
+}
+ 
+ 
+.active {
+  background-color: whitesmoke;
+}
+ 
+h1 {
+  font-family: Italiana;
+  font-size: 100px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #020d4b;
+  text-decoration: underline;
+}
+ 
+.hometext {
+  background-color: #FFF4CF;
+  color: #020d4b;
+  font-family: Yellowtail;
+  font-weight: 600;
+  font-size: 35px;
+  width: auto;
+  padding: 35px;
+  margin-top: 250px;
+ 
+}
+ 
+.slide {
+  position: relative;
+  display: block;
+  width: 500px;
+  height: 300px;
+  margin-top: 65px;
+  margin-left: 200px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+ 
+.slide:before, .slide:after {
+  content: '⥪';
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  background: dodgerblue;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+ 
+.slide:after {
+  content: '⥭';
+  left: auto;
+  right: 1rem;
+}
+ 
+/* I haven't found a way for IE and Edge to let me style inputs that way */
+input {
+  appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: translateX(100%);
+  transition: transform ease-in-out 400ms;
+  z-index: 1;
+}
+ 
+input:focus {
+  outline: none;
+}
+ 
+input:after {
+  content: attr(title);
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  padding: .5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+ 
+input:not(checked):before {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  top: 50%;
+  left: calc(-100% + 1rem);
+}
+ 
+input:checked:before {
+  display: none;
+  left: 1rem;
+}
+ 
+input:checked {
+  transform: translateX(0);
+  z-index: 0;
+  box-shadow: -5px 10px 20px -15px rgba(0,0,0,1);
+}
+ 
+input:checked + input:before {
+  left: -3rem;
+}
+ 
+input:checked + input ~ input:before {
+  display: none;
+}
+ 
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #020d4b;
+  color: #FFF4CF;
+  margin-top: 150px;
+  font-size: larger;
+}
+ 

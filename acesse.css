@@ -1,0 +1,108 @@
+* { margin: 0; padding: 0; }
+ 
+@font-face {
+  font-family: Italiana;
+  src: url('./fonts/Italiana-Regular.ttf');
+}
+ 
+@font-face {
+  font-family: Yellowtail;
+  src: url('./fonts/Yellowtail-Regular.ttf');
+}
+ 
+body {
+  width: auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #91D6D3;
+}
+ 
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background: #91D6D3;
+}
+ 
+ 
+#menu {
+  background-color: transparent;
+  margin-top: 20px;
+  overflow: hidden;
+  text-decoration: none;
+}
+ 
+#menu ul {
+  max-width: 100%;
+  list-style: none;
+  overflow: hidden;
+  display: flex;
+  padding: 0;
+  justify-content: space-evenly;
+  text-decoration: none;
+}
+ 
+#menu ul li {
+  display: inline;
+  text-decoration: none;
+}
+ 
+#menu ul li a {
+  padding: 20px;
+  color: #020d4b;
+  font-size: 35px;
+  margin: 0px;
+  padding: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  display: inline-block;
+  text-decoration: none;
+  justify-content: center;
+  border-radius: 25px;
+  transition: linear .3s;
+}
+ 
+#menu ul li a:hover {
+  color: #FFF4CF;
+  background-color:#020d4b;
+  border-radius: 25px;
+}
+ 
+ 
+.active {
+  background-color: whitesmoke;
+}
+ 
+h1 {
+  font-family: Italiana;
+  font-size: 100px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #020d4b;
+  text-decoration: underline;
+}
+ 
+h2 {
+  font-family: Italiana;
+  font-size: 70px;
+  font-weight: lighter;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #020d4b;
+}
+ 
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
+  margin-left: 200px;
+  padding: 100px;
+  width: 350px;
+  border: solid 3px #020d4b;
+}
