@@ -1,10 +1,17 @@
+* { margin: 0; padding: 0; }
+ 
+@font-face {
+  font-family: Italiana;
+  src: url('./fonts/Italiana-Regular.ttf');
+}
+ 
 @font-face {
   font-family: Yellowtail;
   src: url('./fonts/Italiana-Regular.ttf');
 }
  
 body {
-  width: 100%;
+  width: auto;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -12,10 +19,10 @@ body {
 }
  
 .header {
-  overflow: hidden;
   position: absolute;
   top: 0;
   width: 100%;
+  height: auto;
   background: #91D6D3;
 }
  
@@ -23,60 +30,59 @@ body {
 #menu {
   background-color: transparent;
   top: 0px;
+  overflow: hidden;
+  text-decoration: none;
 }
  
 #menu ul {
   max-width: 100%;
   list-style: none;
+  overflow: hidden;
   display: flex;
   padding: 0;
-  justify-content: center;
- 
+  justify-content: space-evenly;
+  text-decoration: none;
 }
  
 #menu ul li {
   display: inline;
+  text-decoration: none;
 }
  
 #menu ul li a {
-  color: #000000;
   padding: 20px;
-  font-size: 25px;
+  color: #020d4b;
+  font-size: 35px;
+  margin: 0px;
+  padding: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   display: inline-block;
   text-decoration: none;
   justify-content: center;
   border-radius: 25px;
-  transition: background .4s;
+  transition: linear .3s;
 }
  
 #menu ul li a:hover {
   color: #FFF4CF;
-  background-color: rgb(22, 187, 252);
+  background-color:#020d4b;
   border-radius: 25px;
 }
  
-#menu ul li:last-child a {
-  background-color: rgb(22, 187, 252);
-  color: #FFF4CF;
-  border-radius: 25px;
-}
  
+.active {
+  background-color: whitesmoke;
+}
  
 h1 {
- 
-  font-family: Yellowtail;
+  font-family: Italiana;
   font-size: 100px;
   font-weight: 300;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000000;
-}
- 
-.button {
-  background: #FFB200;
-  color: #277BC0;
-  font-size: 25px;
+  color: #020d4b;
+  text-decoration: underline;
 }
  
 .gallery {
@@ -96,13 +102,23 @@ h1 {
  
  
 .gallery__item--1 {
+  animation: puffIn 0.85s;
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 3;
 }
  
+.gallery__item--2 {
+  animation: puffIn 0.96s;
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+ 
 .gallery__item--3 {
+  animation: puffIn 0.99s;
   grid-column-start: 5;
   grid-column-end: 9;
   grid-row-start: 1;
@@ -110,6 +126,7 @@ h1 {
 }
  
 .gallery__item--4 {
+  animation: puffIn 0.95s;
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 3;
@@ -117,6 +134,7 @@ h1 {
 }
  
 .gallery__item--5 {
+  animation: puffIn 0.97s;
   grid-column-start: 1;
   grid-column-end: 9;
   grid-row-start: 6;
@@ -124,6 +142,51 @@ h1 {
 }
  
  
+.hometext {
+  background-color: #FFF4CF;
+  color: #020d4b;
+  font-family: Yellowtail;
+  font-weight: 600;
+  font-size: 55px;
+  width: auto;
+  padding: 35px;
+  margin-top: 75px;
+ 
+}
+ 
+.buttonmenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 50px;
+}
+ 
+.button {
+  font-size: 40px;
+  color: #020d4b;
+  background-color: #FFF4CF;
+  border: transparent;
+  border-radius: 15px;
+  box-shadow: 0 1px 1px 0 #020d4b, 0 3px 10px 0 #020d4b;
+}
+ 
+.button:hover {
+  color: #FFF4CF;
+  background-color: #020d4b;
+  cursor: pointer;
+}
+ 
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #020d4b;
+  color: #FFF4CF;
+  font-size: larger;
+}
+ 
+ 
 @media only screen and ( max-width : 900px ) {
  
 }
@@ -135,12 +198,55 @@ h1 {
   {opacity:1}}
  
  
-@media only screen and ( max-width : 900px ) {
  
+  @keyframes slideUpReturn {
+    0% {
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+ 
+    100% {
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%);
+    }
+  }
+ 
+ 
+  @keyframes swashIn {
+    0% {
+      opacity: 0;
+      -webkit-transform-origin: 30% 30%;
+      transform-origin: 50% 30%;
+      -webkit-transform: scale(0, 0);
+      transform: scale(0, 0);
+    }
+ 
+ 
+    100% {
+      opacity: 1;
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+    }
+  }
+ 
+  @keyframes puffIn {
+  0% {
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: scale(2, 2);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 1;
+    transform-origin: 50% 50%;
+    transform: scale(1, 1);
+    filter: blur(0px);
+  }
 }
  
- 
-@keyframes tracking-in-expand{
-  0%{letter-spacing:-.2em;opacity:0}
-  40%{opacity:.6}100%
-  {opacity:1}}
