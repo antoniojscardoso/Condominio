@@ -95,14 +95,41 @@ h2 {
   color: #020d4b;
 }
  
-.login{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+img {
+  width: 30%;
+  height: 100%;
+  object-fit:cover;
+  
+  -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
+  
+  transform-origin:center;
+  transform:perspective(800px) rotateY(25deg);
+  transition:0.5s;
+}
+
+.ofertas {
+  margin-top: 60px;
+  margin-left: 150px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width: 1000px;  
+}
+.ofertas:hover img {
+  opacity:0.3;
+}
+.ofertas img:hover {
+  transform:perspective(800px)       rotateY(0deg);
+  opacity:1;
+}
+
+.contato {
+  background-color: #fffdf5;
+  color: #020d4b;
+  font-family: Italiana;
+  font-weight: 600;
+  font-size: 35px;
+  width: auto;
+  padding: 35px;
   margin-top: 250px;
-  margin-left: 200px;
-  padding: 100px;
-  width: 350px;
-  border: solid 3px #020d4b;
 }
