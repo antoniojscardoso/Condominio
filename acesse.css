@@ -115,13 +115,7 @@ img {
   align-items:center;
   width: 1000px;  
 }
-.ofertas:hover img {
-  opacity:0.3;
-}
-.ofertas img:hover {
-  transform:perspective(800px)       rotateY(0deg);
-  opacity:1;
-}
+
 
 .contato {
   background-color: #fffdf5;
@@ -132,4 +126,41 @@ img {
   width: auto;
   padding: 35px;
   margin-top: 250px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  background-color: #fffdf5;
+  color: #020d4b;
+  font-family: Italiana;
+  font-weight: 600;
+  font-size: 35px;
+  width: auto;
+  padding: 35px;
+  margin-top: 50px;
+ 
+}
+
+#btntext {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 25px;
+}
+
+.button {
+  font-size: 40px;
+  color: #020d4b;
+  align-self: center;
+  padding: 5px;
+  background-color: #fffdf5;
+  border: transparent;
+  border-radius: 15px;
+  box-shadow: 0 1px 1px 0 #020d4b, 0 3px 10px 0 #020d4b;
+}
+ 
+.button:hover {
+  color: #fffdf5;
+  background-color: #020d4b;
+  cursor: pointer;
 }
