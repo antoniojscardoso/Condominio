@@ -11,7 +11,11 @@ Um projeto para sindicos e administradores de condominios oferecerem aos morador
 💡 Compartilhamento de negócios e oportunidades para condôminos.
 
 📉 Descontos de grandes marcas. 
-
+<h1>
 <img src ="imagens/renner-logo-6.png" width="80" height="80">
+<img src ="imagens/vivara_logo.jpeg" width="80" height="80">
+<img src ="imagens/netshoes.jpg" width="80" height="80">
+<img src ="imagens/movida-logo.png" width="80" height="80">
+</h1>
 
 
